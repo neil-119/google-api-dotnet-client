@@ -16,6 +16,7 @@ Supported Platforms
 * Windows Store apps
 * Windows Phone 8 and 8.1
 * Portable Class Libraries
+* Windows, Mac, Linux (DNX 4.x / DNX Core 5 beta4)
 
 Developer Documentation
 =================================

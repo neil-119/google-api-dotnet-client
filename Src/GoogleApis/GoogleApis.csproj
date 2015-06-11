@@ -59,24 +59,52 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
-    <None Include="Apis\ServiceRequests.cd" />
+    <None Include="..\GoogleApis.vNext\Apis\ServiceRequests.cd">
+      <Link>Apis\ServiceRequests.cd</Link>
+    </None>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Apis\Requests\BatchRequest.cs" />
-    <Compile Include="Apis\Requests\ClientServiceRequest.cs" />
-    <Compile Include="Apis\Requests\ETagAction.cs" />
-    <Compile Include="Apis\Requests\HttpRequestMessageExtenstions.cs" />
-    <Compile Include="Apis\Requests\IClientServiceRequest.cs" />
-    <Compile Include="Apis\Requests\IDirectResponseSchema.cs" />
-    <Compile Include="Apis\Services\BaseClientService.cs" />
-    <Compile Include="Apis\Services\IClientService.cs" />
-    <Compile Include="Apis\[Media]\Download\IDownloadProgress.cs" />
-    <Compile Include="Apis\[Media]\Download\IMediaDownloader.cs" />
-    <Compile Include="Apis\[Media]\Download\MediaDownloader.cs" />
-    <Compile Include="Apis\[Media]\Upload\IUploadProgress.cs" />
-    <Compile Include="Apis\[Media]\Upload\ResumableUpload.cs" />
+    <Compile Include="..\GoogleApis.vNext\Apis\Requests\BatchRequest.cs">
+      <Link>Apis\Requests\BatchRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.vNext\Apis\Requests\ClientServiceRequest.cs">
+      <Link>Apis\Requests\ClientServiceRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.vNext\Apis\Requests\ETagAction.cs">
+      <Link>Apis\Requests\ETagAction.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.vNext\Apis\Requests\HttpRequestMessageExtenstions.cs">
+      <Link>Apis\Requests\HttpRequestMessageExtenstions.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.vNext\Apis\Requests\IClientServiceRequest.cs">
+      <Link>Apis\Requests\IClientServiceRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.vNext\Apis\Requests\IDirectResponseSchema.cs">
+      <Link>Apis\Requests\IDirectResponseSchema.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.vNext\Apis\Services\BaseClientService.cs">
+      <Link>Apis\Services\BaseClientService.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.vNext\Apis\Services\IClientService.cs">
+      <Link>Apis\Services\IClientService.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.vNext\Apis\[Media]\Download\IDownloadProgress.cs">
+      <Link>Apis\[Media]\Download\IDownloadProgress.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.vNext\Apis\[Media]\Download\IMediaDownloader.cs">
+      <Link>Apis\[Media]\Download\IMediaDownloader.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.vNext\Apis\[Media]\Download\MediaDownloader.cs">
+      <Link>Apis\[Media]\Download\MediaDownloader.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.vNext\Apis\[Media]\Upload\IUploadProgress.cs">
+      <Link>Apis\[Media]\Upload\IUploadProgress.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.vNext\Apis\[Media]\Upload\ResumableUpload.cs">
+      <Link>Apis\[Media]\Upload\ResumableUpload.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -56,38 +56,102 @@
     <DocumentationFile>Google.Apis.Auth.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="JsonWebSignature.cs" />
-    <Compile Include="JsonWebToken.cs" />
-    <Compile Include="OAuth2\ComputeCredential.cs" />
-    <Compile Include="OAuth2\Requests\GoogleRevokeTokenRequest.cs" />
-    <Compile Include="OAuth2\ServiceCredential.cs" />
-    <Compile Include="OAuth2\Web\AuthorizationCodeWebApp.cs" />
-    <Compile Include="GoogleJsonWebSignature.cs" />
-    <Compile Include="OAuth2\Web\AuthWebUtility.cs" />
-    <Compile Include="OAuth2\Flows\IAuthorizationCodeFlow.cs" />
-    <Compile Include="OAuth2\AuthorizationCodeInstalledApp.cs" />
-    <Compile Include="OAuth2\BearerToken.cs" />
-    <Compile Include="OAuth2\Requests\TokenRequestExtenstions.cs" />
-    <Compile Include="OAuth2\UserCredential.cs" />
-    <Compile Include="OAuth2\Flows\AuthorizationCodeFlow.cs" />
-    <Compile Include="OAuth2\ClientSecrets.cs" />
-    <Compile Include="OAuth2\Flows\GoogleAuthorizationCodeFlow.cs" />
-    <Compile Include="OAuth2\IAccessMethod.cs" />
-    <Compile Include="OAuth2\IAuthorizationCodeInstalledApp.cs" />
-    <Compile Include="OAuth2\ICodeReceiver.cs" />
-    <Compile Include="OAuth2\Requests\AuthorizationCodeRequestUrl.cs" />
-    <Compile Include="OAuth2\Requests\AuthorizationCodeTokenRequest.cs" />
-    <Compile Include="OAuth2\Requests\GoogleAssertionTokenRequest.cs" />
-    <Compile Include="OAuth2\Requests\GoogleAuthorizationCodeRequestUrl.cs" />
-    <Compile Include="OAuth2\Responses\AuthorizationCodeResponseUrl.cs" />
-    <Compile Include="OAuth2\Requests\AuthorizationRequestUrl.cs" />
-    <Compile Include="OAuth2\GoogleClientSecrets.cs" />
-    <Compile Include="OAuth2\GoogleConsts.cs" />
-    <Compile Include="OAuth2\Requests\RefreshTokenRequest.cs" />
-    <Compile Include="OAuth2\Responses\TokenErrorResponse.cs" />
-    <Compile Include="OAuth2\Requests\TokenRequest.cs" />
-    <Compile Include="OAuth2\Responses\TokenResponse.cs" />
-    <Compile Include="OAuth2\Responses\TokenResponseException.cs" />
+    <Compile Include="..\GoogleApis.Auth.vNext\GoogleJsonWebSignature.cs">
+      <Link>GoogleJsonWebSignature.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\JsonWebSignature.cs">
+      <Link>JsonWebSignature.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\JsonWebToken.cs">
+      <Link>JsonWebToken.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\AuthorizationCodeInstalledApp.cs">
+      <Link>OAuth2\AuthorizationCodeInstalledApp.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\BearerToken.cs">
+      <Link>OAuth2\BearerToken.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\ClientSecrets.cs">
+      <Link>OAuth2\ClientSecrets.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\ComputeCredential.cs">
+      <Link>OAuth2\ComputeCredential.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\Flows\AuthorizationCodeFlow.cs">
+      <Link>OAuth2\Flows\AuthorizationCodeFlow.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\Flows\GoogleAuthorizationCodeFlow.cs">
+      <Link>OAuth2\Flows\GoogleAuthorizationCodeFlow.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\Flows\IAuthorizationCodeFlow.cs">
+      <Link>OAuth2\Flows\IAuthorizationCodeFlow.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\GoogleClientSecrets.cs">
+      <Link>OAuth2\GoogleClientSecrets.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\GoogleConsts.cs">
+      <Link>OAuth2\GoogleConsts.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\IAccessMethod.cs">
+      <Link>OAuth2\IAccessMethod.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\IAuthorizationCodeInstalledApp.cs">
+      <Link>OAuth2\IAuthorizationCodeInstalledApp.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\ICodeReceiver.cs">
+      <Link>OAuth2\ICodeReceiver.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\Requests\AuthorizationCodeRequestUrl.cs">
+      <Link>OAuth2\Requests\AuthorizationCodeRequestUrl.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\Requests\AuthorizationCodeTokenRequest.cs">
+      <Link>OAuth2\Requests\AuthorizationCodeTokenRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\Requests\AuthorizationRequestUrl.cs">
+      <Link>OAuth2\Requests\AuthorizationRequestUrl.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\Requests\GoogleAssertionTokenRequest.cs">
+      <Link>OAuth2\Requests\GoogleAssertionTokenRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\Requests\GoogleAuthorizationCodeRequestUrl.cs">
+      <Link>OAuth2\Requests\GoogleAuthorizationCodeRequestUrl.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\Requests\GoogleRevokeTokenRequest.cs">
+      <Link>OAuth2\Requests\GoogleRevokeTokenRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\Requests\RefreshTokenRequest.cs">
+      <Link>OAuth2\Requests\RefreshTokenRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\Requests\TokenRequest.cs">
+      <Link>OAuth2\Requests\TokenRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\Requests\TokenRequestExtenstions.cs">
+      <Link>OAuth2\Requests\TokenRequestExtenstions.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\Responses\AuthorizationCodeResponseUrl.cs">
+      <Link>OAuth2\Responses\AuthorizationCodeResponseUrl.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\Responses\TokenErrorResponse.cs">
+      <Link>OAuth2\Responses\TokenErrorResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\Responses\TokenResponse.cs">
+      <Link>OAuth2\Responses\TokenResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\Responses\TokenResponseException.cs">
+      <Link>OAuth2\Responses\TokenResponseException.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\ServiceCredential.cs">
+      <Link>OAuth2\ServiceCredential.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\UserCredential.cs">
+      <Link>OAuth2\UserCredential.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\Web\AuthorizationCodeWebApp.cs">
+      <Link>OAuth2\Web\AuthorizationCodeWebApp.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Auth.vNext\OAuth2\Web\AuthWebUtility.cs">
+      <Link>OAuth2\Web\AuthWebUtility.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

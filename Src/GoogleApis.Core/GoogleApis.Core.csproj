@@ -57,51 +57,132 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
-    <None Include="Apis\Http\ClassDiagram.cd" />
-    <None Include="app.config" />
+    <None Include="..\GoogleApis.Core.vNext\Apis\Http\ClassDiagram.cd">
+      <Link>Apis\Http\ClassDiagram.cd</Link>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Apis\Discovery\DiscoveryVersion.cs" />
-    <Compile Include="Apis\Discovery\Features.cs" />
-    <Compile Include="Apis\Discovery\IParameter.cs" />
-    <Compile Include="Apis\Discovery\Parameter.cs" />
-    <Compile Include="Apis\Http\BackOffHandler.cs" />
-    <Compile Include="Apis\Http\ConfigurableHttpClient.cs" />
-    <Compile Include="Apis\Http\ConfigurableMessageHandler.cs" />
-    <Compile Include="Apis\Http\ExponentialBackOffInitializer.cs" />
-    <Compile Include="Apis\Http\HttpClientFactory.cs" />
-    <Compile Include="Apis\Http\HttpConsts.cs" />
-    <Compile Include="Apis\Http\HttpExtenstions.cs" />
-    <Compile Include="Apis\Http\IConfigurableHttpClientInitializer.cs" />
-    <Compile Include="Apis\Http\IHttpClientFactory.cs" />
-    <Compile Include="Apis\Http\IHttpExceptionHandler.cs" />
-    <Compile Include="Apis\Http\IHttpExecuteInterceptor.cs" />
-    <Compile Include="Apis\Http\IHttpUnsuccessfulResponseHandler.cs" />
-    <Compile Include="Apis\Http\MaxUrlLengthInterceptor.cs" />
-    <Compile Include="Apis\ISerializer.cs" />
-    <Compile Include="Apis\Json\IJsonSerializer.cs" />
-    <Compile Include="Apis\Json\NewtonsoftJsonSerializer.cs" />
-    <Compile Include="Apis\Logging\ILogger.cs" />
-    <Compile Include="Apis\Logging\NullLogger.cs" />
-    <Compile Include="Apis\Requests\Parameters\ParameterCollection.cs" />
-    <Compile Include="Apis\Requests\Parameters\ParameterUtils.cs" />
-    <Compile Include="Apis\Requests\Parameters\ParameterValidator.cs" />
-    <Compile Include="Apis\Requests\RequestBuilder.cs" />
-    <Compile Include="Apis\Requests\RequestError.cs" />
-    <Compile Include="Apis\Requests\SingleError.cs" />
-    <Compile Include="Apis\Testing\VisibleForTestOnly.cs" />
-    <Compile Include="Apis\Util\ExponentialBackOff.cs" />
-    <Compile Include="Apis\Util\IBackOff.cs" />
-    <Compile Include="Apis\Util\IClock.cs" />
-    <Compile Include="Apis\Util\Repeatable.cs" />
-    <Compile Include="Apis\Util\RequestParameterAttribute.cs" />
-    <Compile Include="Apis\Util\StandardResponse.cs" />
-    <Compile Include="Apis\Util\Store\IDataStore.cs" />
-    <Compile Include="Apis\Util\StringValueAttribute.cs" />
-    <Compile Include="Apis\Util\Utilities.cs" />
-    <Compile Include="ApplicationContext.cs" />
-    <Compile Include="GoogleApiException.cs" />
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Discovery\DiscoveryVersion.cs">
+      <Link>Apis\Discovery\DiscoveryVersion.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Discovery\Features.cs">
+      <Link>Apis\Discovery\Features.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Discovery\IParameter.cs">
+      <Link>Apis\Discovery\IParameter.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Discovery\Parameter.cs">
+      <Link>Apis\Discovery\Parameter.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Http\BackOffHandler.cs">
+      <Link>Apis\Http\BackOffHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Http\ConfigurableHttpClient.cs">
+      <Link>Apis\Http\ConfigurableHttpClient.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Http\ConfigurableMessageHandler.cs">
+      <Link>Apis\Http\ConfigurableMessageHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Http\ExponentialBackOffInitializer.cs">
+      <Link>Apis\Http\ExponentialBackOffInitializer.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Http\HttpClientFactory.cs">
+      <Link>Apis\Http\HttpClientFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Http\HttpConsts.cs">
+      <Link>Apis\Http\HttpConsts.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Http\HttpExtenstions.cs">
+      <Link>Apis\Http\HttpExtenstions.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Http\IConfigurableHttpClientInitializer.cs">
+      <Link>Apis\Http\IConfigurableHttpClientInitializer.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Http\IHttpClientFactory.cs">
+      <Link>Apis\Http\IHttpClientFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Http\IHttpExceptionHandler.cs">
+      <Link>Apis\Http\IHttpExceptionHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Http\IHttpExecuteInterceptor.cs">
+      <Link>Apis\Http\IHttpExecuteInterceptor.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Http\IHttpUnsuccessfulResponseHandler.cs">
+      <Link>Apis\Http\IHttpUnsuccessfulResponseHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Http\MaxUrlLengthInterceptor.cs">
+      <Link>Apis\Http\MaxUrlLengthInterceptor.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\ISerializer.cs">
+      <Link>Apis\ISerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Json\IJsonSerializer.cs">
+      <Link>Apis\Json\IJsonSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Json\NewtonsoftJsonSerializer.cs">
+      <Link>Apis\Json\NewtonsoftJsonSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Logging\ILogger.cs">
+      <Link>Apis\Logging\ILogger.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Logging\NullLogger.cs">
+      <Link>Apis\Logging\NullLogger.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Requests\Parameters\ParameterCollection.cs">
+      <Link>Apis\Requests\Parameters\ParameterCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Requests\Parameters\ParameterUtils.cs">
+      <Link>Apis\Requests\Parameters\ParameterUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Requests\Parameters\ParameterValidator.cs">
+      <Link>Apis\Requests\Parameters\ParameterValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Requests\RequestBuilder.cs">
+      <Link>Apis\Requests\RequestBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Requests\RequestError.cs">
+      <Link>Apis\Requests\RequestError.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Requests\SingleError.cs">
+      <Link>Apis\Requests\SingleError.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Testing\VisibleForTestOnly.cs">
+      <Link>Apis\Testing\VisibleForTestOnly.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Util\ExponentialBackOff.cs">
+      <Link>Apis\Util\ExponentialBackOff.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Util\IBackOff.cs">
+      <Link>Apis\Util\IBackOff.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Util\IClock.cs">
+      <Link>Apis\Util\IClock.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Util\Repeatable.cs">
+      <Link>Apis\Util\Repeatable.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Util\RequestParameterAttribute.cs">
+      <Link>Apis\Util\RequestParameterAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Util\StandardResponse.cs">
+      <Link>Apis\Util\StandardResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Util\Store\IDataStore.cs">
+      <Link>Apis\Util\Store\IDataStore.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Util\StringValueAttribute.cs">
+      <Link>Apis\Util\StringValueAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\Apis\Util\Utilities.cs">
+      <Link>Apis\Util\Utilities.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\ApplicationContext.cs">
+      <Link>ApplicationContext.cs</Link>
+    </Compile>
+    <Compile Include="..\GoogleApis.Core.vNext\GoogleApiException.cs">
+      <Link>GoogleApiException.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

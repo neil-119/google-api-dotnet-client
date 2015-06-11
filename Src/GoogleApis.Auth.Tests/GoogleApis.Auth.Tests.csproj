@@ -41,15 +41,17 @@
     <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop">
       <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
     </Reference>
-    <Reference Include="Moq">
-      <HintPath>..\..\packages\Moq.4.2.1402.2112\lib\net40\Moq.dll</HintPath>
+    <Reference Include="Moq, Version=4.2.1502.911, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moq.4.2.1502.0911\lib\net40\Moq.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Newtonsoft.Json.6.0.6\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -105,9 +107,17 @@
       <Project>{db18f3a6-b16a-477b-a7b1-c2b116d1bfb0}</Project>
       <Name>GoogleApis.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GoogleApis.DotNet4\GoogleApis.DotNet4.csproj">
+      <Project>{c4da0abe-2c2e-4bb8-9881-5ff80b0c1afd}</Project>
+      <Name>GoogleApis.DotNet4</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GoogleApis.Tests\GoogleApis.Tests.csproj">
       <Project>{9a8aa9ef-6904-43d8-8a26-0ab62069c2dc}</Project>
       <Name>GoogleApis.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GoogleApis\GoogleApis.csproj">
+      <Project>{826cf988-eee8-4b75-8f53-b7e851a17baa}</Project>
+      <Name>GoogleApis</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

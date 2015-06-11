@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0-*",
+  "description": "Google API Core Library ported to DNX Core 5.0",
+  "authors": [ "peleyal" ],
+  "tags": [ "" ],
+  "projectUrl": "https://github.com/neil-119/google-api-dotnet-client",
+  "licenseUrl": "https://github.com/neil-119/google-api-dotnet-client/blob/master/LICENSE",
+
+  "dependencies": {
+    "Newtonsoft.Json": "7.0.1-beta3"
+  },
+
+  "frameworks": {
+    "dnx451": {
+      "dependencies": {
+      },
+      "frameworkAssemblies": {
+        "System.Collections": "4.0.0.0",
+        "System.Linq": "4.0.0.0",
+        "System.Threading": "4.0.0.0",
+        "Microsoft.CSharp": "4.0.0.0",
+        "System.Net.Primitives": "4.0.0.0",
+        "System.Reflection.Extensions": "4.0.0.0",
+        "System.Reflection": "4.0.0.0",
+        "System.Threading.Tasks": "4.0.0.0",
+        "System.Globalization": "4.0.0.0",
+        "System.Net.Http": "4.0.0.0",
+        "System.Text.RegularExpressions": "4.0.0.0",
+        "System.Runtime": "4.0.10.0",
+        "System.Runtime.Extensions": "4.0.0.0"
+      }
+    },
+    "dnxcore50": {
+      "dependencies": {
+        "System.Collections": "4.0.10-beta-22816",
+        "System.Linq": "4.0.0-beta-22816",
+        "System.Threading": "4.0.10-beta-22816",
+        "Microsoft.CSharp": "4.0.0-beta-22816",
+        "System.Net.Primitives": "4.0.10-beta-22816",
+        "System.Reflection.Extensions": "4.0.0-beta-22816",
+        "System.Reflection": "4.0.10-beta-22816",
+        "System.Reflection.TypeExtensions": "4.0.0-beta-22816",
+        "System.Threading.Tasks": "4.0.10-beta-22816",
+        "System.Globalization": "4.0.10-beta-22816",
+        "System.Net.Http": "4.0.0-beta-22816",
+        "System.Text.RegularExpressions": "4.0.10-beta-22816",
+        "System.Runtime": "4.0.20-beta-22816",
+        "System.Runtime.Extensions": "4.0.10-beta-22816"
+      }
+    }
+  }
+}

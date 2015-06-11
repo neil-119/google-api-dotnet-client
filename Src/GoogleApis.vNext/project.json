@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0-*",
+  "description": "Google API Library ported to DNX Core 5.0",
+  "authors": [ "peleyal" ],
+  "tags": [ "" ],
+  "projectUrl": "https://github.com/neil-119/google-api-dotnet-client",
+  "licenseUrl": "https://github.com/neil-119/google-api-dotnet-client/blob/master/LICENSE",
+
+  "dependencies": {
+    "GoogleApis.Core.vNext": "1.0.0-*",
+    "Zlib.Portable": "1.11.0-beta1"
+  },
+
+  "frameworks": {
+    "dnx451": {
+      "frameworkAssemblies": {
+        "System.IO.Compression": "4.0.0.0"
+      }
+    },
+    "dnxcore50": {
+      "dependencies": {
+        "System.Collections": "4.0.10-beta-22816",
+        "System.Linq": "4.0.0-beta-22816",
+        "System.Threading": "4.0.10-beta-22816",
+        "Microsoft.CSharp": "4.0.0-beta-22816",
+        "System.IO.Compression": "4.0.0-beta-22816"
+      }
+    }
+  }
+}

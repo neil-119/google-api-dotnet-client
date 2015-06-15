@@ -9,6 +9,7 @@ Requirements
 =================================
 * [.NET Framework 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=17851)
 * [.NET Framework 4.5](http://www.microsoft.com/en-us/download/details.aspx?id=30653)
+* [DNX4 or DNX Core 5](https://github.com/aspnet/DNX)
 
 Supported Platforms
 =================================

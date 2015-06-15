@@ -1,23 +1,18 @@
 ## Google APIs client Library for .NET  ##
 
 ## Description ##
-The Google APIs client library for .NET provides simple, flexible, and powerful access to Google APIs such as Drive, YouTube, Calendar, Storage and Analytics.
+The Google APIs client library ported to DNX / DNX Core 5.0. Supports .NET Framework 4.x and .NET Core.
 
 The library supports OAuth2.0 authentication, and is able to generate strongly typed client libraries for Discovery-based services.
 
 Requirements 
 =================================
-* [.NET Framework 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=17851)
-* [.NET Framework 4.5](http://www.microsoft.com/en-us/download/details.aspx?id=30653)
 * [DNX4 or DNX Core 5](https://github.com/aspnet/DNX)
 
 Supported Platforms
 =================================
 
-* Windows Store apps
-* Windows Phone 8 and 8.1
-* Portable Class Libraries
-* Windows, Mac, Linux (DNX 4.x / DNX Core 5 beta4)
+* Windows, Mac, Linux (DNX 4.x / DNX Core 5)
 
 Developer Documentation
 =================================
@@ -29,7 +24,7 @@ Developer Documentation
 NuGet Packages
 =================================
 
-To make it easer for you to develop with the Google APIs using the Google API client Library for .NET we have released a number of NuGet packages. A full list of all the packages avaliable can be found at [Google.APIs nuget](https://www.nuget.org/packages?q=google.apis&prerelease=true&sortOrder=relevance)
+To make it easer for you to develop with the Google APIs using the Google API client Library for .NET we have released a number of NuGet packages. A full list of all the packages avaliable can be found at [Google.APIs nuget](https://www.nuget.org/packages?q=google+vnext&prerelease=true&sortOrder=relevance)
 
 Support Forums
 =================================

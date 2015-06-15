@@ -21,6 +21,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -28,6 +30,8 @@ using System.Threading.Tasks;
 using Google.Apis.Http;
 using Google.Apis.Services;
 using Google.Apis.Testing;
+
+[assembly:InternalsVisibleTo("GoogleApis.Tests.vNext")]
 
 namespace Google.Apis.Requests
 {
@@ -258,9 +262,12 @@ namespace Google.Apis.Requests
                     var value = line.Substring(separatorIndex + 1).Trim();
                     // Check if the header already exists, and if so append its value 
                     // to the existing value. Fixes issue #548.
-                    if (headersDic.ContainsKey(key)) {
+                    if (headersDic.ContainsKey(key))
+                    {
                         headersDic[key] = headersDic[key] + ", " + value;
-                    } else {
+                    }
+                    else
+                    {
                         headersDic.Add(key, value);
                     }
                 }
@@ -297,7 +304,7 @@ namespace Google.Apis.Requests
         /// Creates the batch outer request content which includes all the individual requests to Google servers.
         /// </summary>
         [VisibleForTestOnly]
-        public async static Task<HttpContent> CreateOuterRequestContent(IEnumerable<IClientServiceRequest> requests)
+        internal async static Task<HttpContent> CreateOuterRequestContent(IEnumerable<IClientServiceRequest> requests)
         {
             var mixedContent = new MultipartContent("mixed");
             foreach (var request in requests)
@@ -320,7 +327,7 @@ namespace Google.Apis.Requests
 
         /// <summary>Creates the individual server request.</summary>
         [VisibleForTestOnly]
-        public static async Task<HttpContent> CreateIndividualRequest(IClientServiceRequest request)
+        internal static async Task<HttpContent> CreateIndividualRequest(IClientServiceRequest request)
         {
             HttpRequestMessage requestMessage = request.CreateRequest(false);
             string requestContent = await CreateRequestContentString(requestMessage).ConfigureAwait(false);
@@ -335,7 +342,7 @@ namespace Google.Apis.Requests
         /// request message.
         /// </summary>
         [VisibleForTestOnly]
-        public static async Task<string> CreateRequestContentString(HttpRequestMessage requestMessage)
+        internal static async Task<string> CreateRequestContentString(HttpRequestMessage requestMessage)
         {
             var sb = new StringBuilder();
             sb.AppendFormat("{0} {1}", requestMessage.Method, requestMessage.RequestUri.AbsoluteUri);

@@ -15,16 +15,19 @@ limitations under the License.
 */
 
 using System;
-
+using System.Runtime.CompilerServices;
 using Google.Apis.Logging;
 using Google.Apis.Testing;
+
+[assembly: InternalsVisibleTo("GoogleApis.Tests.vNext")]
 
 namespace Google
 {
     /// <summary>Defines the context in which this library runs. It allows setting up custom loggers.</summary>
     public static class ApplicationContext
     {
-        private static ILogger logger;
+        [VisibleForTestOnly]
+        internal static ILogger logger;
 
         /// <summary>Returns the logger used within this application context.</summary>
         /// <remarks>It creates a <see cref="NullLogger"/> if no logger was registered previously</remarks>

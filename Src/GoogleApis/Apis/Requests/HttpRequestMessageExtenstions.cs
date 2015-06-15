@@ -18,10 +18,13 @@ using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
-
-using Ionic.Zlib;
-
 using Google.Apis.Services;
+
+#if DNX451 || DNXCORE50
+using System.IO.Compression;
+#else
+using Ionic.Zlib;
+#endif
 
 namespace Google.Apis.Requests
 {
@@ -81,7 +84,7 @@ namespace Google.Apis.Requests
             byte[] bytes = System.Text.Encoding.UTF8.GetBytes(serializedObject);
             using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
             {
-                using (GZipStream gzip = new GZipStream(ms, CompressionMode.Compress, true))
+                using (var gzip = new GZipStream(ms, CompressionMode.Compress, true))
                 {
                     gzip.Write(bytes, 0, bytes.Length);
                 }

@@ -119,7 +119,11 @@ namespace Google.Apis.Requests.Parameters
                 var value = property.GetValue(request, null);
 
                 // Call action with the type name and value.
+#if DNX451 || DNXCORE50
+                if (propertyType.GetTypeInfo().IsValueType || value != null)
+#else
                 if (propertyType.IsValueType || value != null)
+#endif
                 {
                     action(attribute.Type, name, value);
                 }

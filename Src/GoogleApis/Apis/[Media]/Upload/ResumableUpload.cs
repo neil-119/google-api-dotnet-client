@@ -20,6 +20,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -174,9 +175,8 @@ namespace Google.Apis.Upload
         /// <summary>Gets or sets the body of this request.</summary>
         public TRequest Body { get; set; }
 
-        /// <summary>Change this value ONLY for testing purposes!</summary>
         [VisibleForTestOnly]
-        protected int chunkSize = DefaultChunkSize;
+        internal int chunkSize = DefaultChunkSize;
 
         /// <summary>
         /// Gets or sets the size of each chunk sent to the server.
@@ -786,7 +786,7 @@ namespace Google.Apis.Upload
     /// The version with two types contains both a request object and a response object.
     /// </summary>
     /// <remarks>
-    /// See: https://developers.google.com/gdata/docs/resumable_upload for
+    /// See: http://code.google.com/apis/gdata/docs/resumable_upload.html for
     /// information on the protocol.
     /// </remarks>
     /// <typeparam name="TRequest">

@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-*",
+  "version": "1.0.2-*",
   "description": "Google API Auth library ported to DNX Core 5.0",
   "authors": [ "peleyal" ],
   "tags": [ "" ],
@@ -8,7 +8,8 @@
 
   "dependencies": {
     "GoogleApis.Core.vNext": "1.0.0-*",
-    "Newtonsoft.Json": "7.0.1-beta3"
+    "Newtonsoft.Json": "7.0.1-beta3",
+    "System.Security.Cryptography.Hashing.Algorithms": "4.0.0-beta-22816"
   },
 
   "frameworks": {
@@ -20,7 +21,10 @@
         "System.Collections": "4.0.10-beta-22816",
         "System.Linq": "4.0.0-beta-22816",
         "System.Threading": "4.0.10-beta-22816",
-        "Microsoft.CSharp": "4.0.0-beta-22816"
+        "Microsoft.CSharp": "4.0.0-beta-22816",
+        "System.Security.Cryptography.X509Certificates": "4.0.0-beta-22816",
+        "System.Security.Cryptography.RSA": "4.0.0-beta-22816",
+        "System.IO.FileSystem": "4.0.0-beta-22816"
       }
     }
   }

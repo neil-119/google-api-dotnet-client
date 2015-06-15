@@ -4,35 +4,56 @@
   "projectFileDependencyGroups": {
     "": [
       "GoogleApis.Core.vNext >= 1.0.0-*",
-      "Newtonsoft.Json >= 7.0.1-beta3"
+      "Newtonsoft.Json >= 7.0.1-beta3",
+      "System.Security.Cryptography.Hashing.Algorithms >= 4.0.0-beta-22816"
     ],
     "DNX,Version=v4.5.1": [],
     "DNXCore,Version=v5.0": [
       "System.Collections >= 4.0.10-beta-22816",
       "System.Linq >= 4.0.0-beta-22816",
       "System.Threading >= 4.0.10-beta-22816",
-      "Microsoft.CSharp >= 4.0.0-beta-22816"
+      "Microsoft.CSharp >= 4.0.0-beta-22816",
+      "System.Security.Cryptography.X509Certificates >= 4.0.0-beta-22816",
+      "System.Security.Cryptography.RSA >= 4.0.0-beta-22816",
+      "System.IO.FileSystem >= 4.0.0-beta-22816"
     ]
   },
   "libraries": {
-    "GoogleApis.Auth.vNext/1.0.0": {
+    "GoogleApis.Auth.vNext/1.0.2": {
       "serviceable": false,
-      "sha": "YJIBUHxa45TEPKaSKLifvbB5jEZ8sXRqrPOMgBORmGq6CsIFRv19NCMtZh3+4OXY4WMUhG4uTAQFUwickG0YqA==",
+      "sha": "K18QJG2LBIlkrBRHpFoJdLmqjboTgXJ7c3d8TrMm+/WhC0C0fEQaPMRlkZ1AV6OYqn7nkmbVfhObR9teFvLxDQ==",
       "frameworks": {
         "DNX,Version=v4.5.1": {
-          "dependencies": {},
-          "frameworkAssemblies": [],
-          "runtimeAssemblies": [],
-          "compileAssemblies": []
+          "dependencies": {
+            "GoogleApis.Core.vNext": "1.0.1",
+            "Newtonsoft.Json": "7.0.1-beta3",
+            "System.Security.Cryptography.Hashing.Algorithms": "4.0.0-beta-22816"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/GoogleApis.Auth.vNext.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/GoogleApis.Auth.vNext.dll"
+          ]
         },
         "DNXCore,Version=v5.0": {
           "dependencies": {
-            "GoogleApis.Core.vNext": "1.0.0",
+            "GoogleApis.Core.vNext": "1.0.1",
             "Newtonsoft.Json": "7.0.1-beta3",
+            "System.Security.Cryptography.Hashing.Algorithms": "4.0.0-beta-22816",
             "System.Collections": "4.0.10-beta-22816",
             "System.Linq": "4.0.0-beta-22816",
             "System.Threading": "4.0.10-beta-22816",
-            "Microsoft.CSharp": "4.0.0-beta-22816"
+            "Microsoft.CSharp": "4.0.0-beta-22816",
+            "System.Security.Cryptography.X509Certificates": "4.0.0-beta-22816",
+            "System.Security.Cryptography.RSA": "4.0.0-beta-22816",
+            "System.IO.FileSystem": "4.0.0-beta-22816"
           },
           "frameworkAssemblies": [],
           "runtimeAssemblies": [
@@ -44,25 +65,56 @@
         }
       },
       "files": [
-        "GoogleApis.Auth.vNext.1.0.0.nupkg",
-        "GoogleApis.Auth.vNext.1.0.0.nupkg.sha512",
+        "GoogleApis.Auth.vNext.1.0.2.nupkg",
+        "GoogleApis.Auth.vNext.1.0.2.nupkg.sha512",
         "GoogleApis.Auth.vNext.nuspec",
+        "lib/dnx451/GoogleApis.Auth.vNext.dll",
+        "lib/dnx451/GoogleApis.Auth.vNext.xml",
         "lib/dnxcore50/GoogleApis.Auth.vNext.dll",
         "lib/dnxcore50/GoogleApis.Auth.vNext.xml"
       ]
     },
-    "GoogleApis.Core.vNext/1.0.0": {
+    "GoogleApis.Core.vNext/1.0.1": {
       "serviceable": false,
-      "sha": "9J2voYwYzcqa7cn5wfAYZXfQJmityz2uMl5Ytygygu5b45f0VuWAk20GdJY3Iu2IsGfIfajveL4WQCs8NiYKSg==",
+      "sha": "ncYDOBmurZwhGDBdH/N+XMFaGIvsCIBUdUWkFAmSqRvLb1YzhfRENtQZSgP8JnYAsQgY808qe24ob6CbDhrI8Q==",
       "frameworks": {
         "DNX,Version=v4.5.1": {
-          "dependencies": {},
-          "frameworkAssemblies": [],
-          "runtimeAssemblies": [],
-          "compileAssemblies": []
+          "dependencies": {
+            "Newtonsoft.Json": "7.0.1-beta3"
+          },
+          "frameworkAssemblies": [
+            "System.Collections",
+            "System.Linq",
+            "System.Threading",
+            "Microsoft.CSharp",
+            "System.Net.Primitives",
+            "System.Reflection.Extensions",
+            "System.Reflection",
+            "System.Threading.Tasks",
+            "System.Globalization",
+            "System.Net.Http",
+            "System.Text.RegularExpressions",
+            "System.Runtime",
+            "System.Runtime.Extensions",
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/GoogleApis.Core.vNext.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/GoogleApis.Core.vNext.dll"
+          ]
         },
         "DNXCore,Version=v5.0": {
           "dependencies": {
+            "Newtonsoft.Json": "7.0.1-beta3",
+            "System.Collections": "4.0.10-beta-22816",
+            "System.Linq": "4.0.0-beta-22816",
+            "System.Threading": "4.0.10-beta-22816",
+            "Microsoft.CSharp": "4.0.0-beta-22816",
             "System.Net.Primitives": "4.0.10-beta-22816",
             "System.Reflection.Extensions": "4.0.0-beta-22816",
             "System.Reflection": "4.0.10-beta-22816",
@@ -70,15 +122,9 @@
             "System.Threading.Tasks": "4.0.10-beta-22816",
             "System.Globalization": "4.0.10-beta-22816",
             "System.Net.Http": "4.0.0-beta-22816",
-            "Newtonsoft.Json": "7.0.1-beta3",
             "System.Text.RegularExpressions": "4.0.10-beta-22816",
             "System.Runtime": "4.0.20-beta-22816",
-            "System.Runtime.Extensions": "4.0.10-beta-22816",
-            "dnx-coreclr-win-x64": "1.0.0-beta4",
-            "System.Collections": "4.0.10-beta-22816",
-            "System.Linq": "4.0.0-beta-22816",
-            "System.Threading": "4.0.10-beta-22816",
-            "Microsoft.CSharp": "4.0.0-beta-22816"
+            "System.Runtime.Extensions": "4.0.10-beta-22816"
           },
           "frameworkAssemblies": [],
           "runtimeAssemblies": [
@@ -90,9 +136,11 @@
         }
       },
       "files": [
-        "GoogleApis.Core.vNext.1.0.0.nupkg",
-        "GoogleApis.Core.vNext.1.0.0.nupkg.sha512",
+        "GoogleApis.Core.vNext.1.0.1.nupkg",
+        "GoogleApis.Core.vNext.1.0.1.nupkg.sha512",
         "GoogleApis.Core.vNext.nuspec",
+        "lib/dnx451/GoogleApis.Core.vNext.dll",
+        "lib/dnx451/GoogleApis.Core.vNext.xml",
         "lib/dnxcore50/GoogleApis.Core.vNext.dll",
         "lib/dnxcore50/GoogleApis.Core.vNext.xml"
       ]
@@ -361,6 +409,100 @@
         "lib/contract/System.IO.dll",
         "lib/net45/System.IO.dll",
         "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.IO.dll"
+      ]
+    },
+    "System.IO.FileSystem/4.0.0-beta-22816": {
+      "serviceable": false,
+      "sha": "PcJ9xwnx7PmUaE5aqAGX0GKzkmmYpGfMzruT1Vfx9XIaFGsVm223ky0/FrKzUc5TYKN4MTfFp8GAooA+I0KMDA==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "System.IO": "4.0.10-beta-22816",
+            "System.IO.FileSystem.Primitives": "4.0.0-beta-22816",
+            "System.Runtime": "4.0.20-beta-22816",
+            "System.Runtime.Handles": "4.0.0-beta-22816",
+            "System.Text.Encoding": "4.0.10-beta-22816",
+            "System.Threading.Tasks": "4.0.10-beta-22816"
+          },
+          "frameworkAssemblies": [
+            "mscorlib"
+          ],
+          "runtimeAssemblies": [
+            "lib/net45/System.IO.FileSystem.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.IO.FileSystem.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.IO": "4.0.10-beta-22816",
+            "System.IO.FileSystem.Primitives": "4.0.0-beta-22816",
+            "System.Runtime": "4.0.20-beta-22816",
+            "System.Runtime.Handles": "4.0.0-beta-22816",
+            "System.Text.Encoding": "4.0.10-beta-22816",
+            "System.Threading.Tasks": "4.0.10-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.IO.FileSystem.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.IO.FileSystem.dll"
+          ]
+        }
+      },
+      "files": [
+        "License.rtf",
+        "System.IO.FileSystem.4.0.0-beta-22816.nupkg",
+        "System.IO.FileSystem.4.0.0-beta-22816.nupkg.sha512",
+        "System.IO.FileSystem.nuspec",
+        "lib/aspnetcore50/System.IO.FileSystem.dll",
+        "lib/contract/System.IO.FileSystem.dll",
+        "lib/net45/System.IO.FileSystem.dll",
+        "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.IO.FileSystem.dll"
+      ]
+    },
+    "System.IO.FileSystem.Primitives/4.0.0-beta-22816": {
+      "serviceable": false,
+      "sha": "UKD9kvQOZ6QHhJnroaRnJVVzu36nDZc+LJNkhEAmXAJT4SL2G8PyWlUkDptcFSEmv5b71/IFdllS8RIfKP9X2g==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816"
+          },
+          "frameworkAssemblies": [
+            "mscorlib"
+          ],
+          "runtimeAssemblies": [
+            "lib/net45/System.IO.FileSystem.Primitives.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.IO.FileSystem.Primitives.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.IO.FileSystem.Primitives.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.IO.FileSystem.Primitives.dll"
+          ]
+        }
+      },
+      "files": [
+        "License.rtf",
+        "System.IO.FileSystem.Primitives.4.0.0-beta-22816.nupkg",
+        "System.IO.FileSystem.Primitives.4.0.0-beta-22816.nupkg.sha512",
+        "System.IO.FileSystem.Primitives.nuspec",
+        "lib/aspnetcore50/System.IO.FileSystem.Primitives.dll",
+        "lib/contract/System.IO.FileSystem.Primitives.dll",
+        "lib/net45/System.IO.FileSystem.Primitives.dll",
+        "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.IO.FileSystem.Primitives.dll"
       ]
     },
     "System.Linq/4.0.0-beta-22816": {
@@ -880,6 +1022,278 @@
         "lib/contract/System.Runtime.Handles.dll",
         "lib/net45/System.Runtime.Handles.dll",
         "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Runtime.Handles.dll"
+      ]
+    },
+    "System.Security.Cryptography.Encoding/4.0.0-beta-22816": {
+      "serviceable": false,
+      "sha": "xxstV4LYIz4ugAWAkXkGlmdrXsl7Nmg1JimeaNVTmMGrTu99VLHW5Mn9HCyozLonxGE4XSgxO8Z/2Ys/FirsPQ==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System"
+          ],
+          "runtimeAssemblies": [
+            "lib/net45/System.Security.Cryptography.Encoding.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.Security.Cryptography.Encoding.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Security.Cryptography.Encoding.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Security.Cryptography.Encoding.dll"
+          ]
+        }
+      },
+      "files": [
+        "License.rtf",
+        "System.Security.Cryptography.Encoding.4.0.0-beta-22816.nupkg",
+        "System.Security.Cryptography.Encoding.4.0.0-beta-22816.nupkg.sha512",
+        "System.Security.Cryptography.Encoding.nuspec",
+        "lib/aspnetcore50/System.Security.Cryptography.Encoding.dll",
+        "lib/contract/System.Security.Cryptography.Encoding.dll",
+        "lib/net45/System.Security.Cryptography.Encoding.dll",
+        "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Security.Cryptography.Encoding.dll"
+      ]
+    },
+    "System.Security.Cryptography.Encryption/4.0.0-beta-22816": {
+      "serviceable": false,
+      "sha": "oAKOXFCQFabEfmiHHLfVFnuv/ber/FuAAmcgdPyUwgg3PWCgss6GhEP89eopGIrKacGUOhberA2W2WYJax3jKQ==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "System.IO": "4.0.10-beta-22816",
+            "System.Runtime": "4.0.20-beta-22816",
+            "System.Threading.Tasks": "4.0.10-beta-22816"
+          },
+          "frameworkAssemblies": [
+            "mscorlib"
+          ],
+          "runtimeAssemblies": [
+            "lib/net45/System.Security.Cryptography.Encryption.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.Security.Cryptography.Encryption.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.IO": "4.0.10-beta-22816",
+            "System.Runtime": "4.0.20-beta-22816",
+            "System.Threading.Tasks": "4.0.10-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Security.Cryptography.Encryption.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Security.Cryptography.Encryption.dll"
+          ]
+        }
+      },
+      "files": [
+        "License.rtf",
+        "System.Security.Cryptography.Encryption.4.0.0-beta-22816.nupkg",
+        "System.Security.Cryptography.Encryption.4.0.0-beta-22816.nupkg.sha512",
+        "System.Security.Cryptography.Encryption.nuspec",
+        "lib/aspnetcore50/System.Security.Cryptography.Encryption.dll",
+        "lib/contract/System.Security.Cryptography.Encryption.dll",
+        "lib/net45/System.Security.Cryptography.Encryption.dll",
+        "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Security.Cryptography.Encryption.dll"
+      ]
+    },
+    "System.Security.Cryptography.Hashing/4.0.0-beta-22816": {
+      "serviceable": false,
+      "sha": "bB8cT1NwMBuz7tejXLQ3eH81s0pRoaqwUrM1CNCNeEV1OFyUQ/qXJhVx5nXTB8AGMIxGVn9JCXMdZm6CM2RTrA==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "System.IO": "4.0.10-beta-22816",
+            "System.Runtime": "4.0.20-beta-22816"
+          },
+          "frameworkAssemblies": [
+            "mscorlib"
+          ],
+          "runtimeAssemblies": [
+            "lib/net45/System.Security.Cryptography.Hashing.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.Security.Cryptography.Hashing.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.IO": "4.0.10-beta-22816",
+            "System.Runtime": "4.0.20-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Security.Cryptography.Hashing.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Security.Cryptography.Hashing.dll"
+          ]
+        }
+      },
+      "files": [
+        "License.rtf",
+        "System.Security.Cryptography.Hashing.4.0.0-beta-22816.nupkg",
+        "System.Security.Cryptography.Hashing.4.0.0-beta-22816.nupkg.sha512",
+        "System.Security.Cryptography.Hashing.nuspec",
+        "lib/aspnetcore50/System.Security.Cryptography.Hashing.dll",
+        "lib/contract/System.Security.Cryptography.Hashing.dll",
+        "lib/net45/System.Security.Cryptography.Hashing.dll",
+        "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Security.Cryptography.Hashing.dll"
+      ]
+    },
+    "System.Security.Cryptography.Hashing.Algorithms/4.0.0-beta-22816": {
+      "serviceable": false,
+      "sha": "xjCltKxHteccyq3dUXzJaN1L7BQJnbS0xT2A79ac3xmzxUDiIFQtRjhlexf/LQ8uTXKR7epqkZL3xsHxbj2aZg==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816",
+            "System.Security.Cryptography.Hashing": "4.0.0-beta-22816"
+          },
+          "frameworkAssemblies": [
+            "mscorlib"
+          ],
+          "runtimeAssemblies": [
+            "lib/net45/System.Security.Cryptography.Hashing.Algorithms.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.Security.Cryptography.Hashing.Algorithms.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816",
+            "System.Security.Cryptography.Hashing": "4.0.0-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Security.Cryptography.Hashing.Algorithms.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Security.Cryptography.Hashing.Algorithms.dll"
+          ]
+        }
+      },
+      "files": [
+        "License.rtf",
+        "System.Security.Cryptography.Hashing.Algorithms.4.0.0-beta-22816.nupkg",
+        "System.Security.Cryptography.Hashing.Algorithms.4.0.0-beta-22816.nupkg.sha512",
+        "System.Security.Cryptography.Hashing.Algorithms.nuspec",
+        "lib/aspnetcore50/System.Security.Cryptography.Hashing.Algorithms.dll",
+        "lib/contract/System.Security.Cryptography.Hashing.Algorithms.dll",
+        "lib/net45/System.Security.Cryptography.Hashing.Algorithms.dll",
+        "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Security.Cryptography.Hashing.Algorithms.dll"
+      ]
+    },
+    "System.Security.Cryptography.RSA/4.0.0-beta-22816": {
+      "serviceable": false,
+      "sha": "62FIwzMoZEfItKJzNWw7586PM3c/ZHZhIVs4Hfvl7WwAfTgC0fWykts+QwhfKeLolE+dWckR3Df2W0slbKyppA==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "System.IO": "4.0.10-beta-22816",
+            "System.Runtime": "4.0.20-beta-22816",
+            "System.Security.Cryptography.Encryption": "4.0.0-beta-22816"
+          },
+          "frameworkAssemblies": [
+            "mscorlib"
+          ],
+          "runtimeAssemblies": [
+            "lib/net45/System.Security.Cryptography.RSA.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.Security.Cryptography.RSA.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.IO": "4.0.10-beta-22816",
+            "System.Runtime": "4.0.20-beta-22816",
+            "System.Security.Cryptography.Encryption": "4.0.0-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Security.Cryptography.RSA.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Security.Cryptography.RSA.dll"
+          ]
+        }
+      },
+      "files": [
+        "License.rtf",
+        "System.Security.Cryptography.RSA.4.0.0-beta-22816.nupkg",
+        "System.Security.Cryptography.RSA.4.0.0-beta-22816.nupkg.sha512",
+        "System.Security.Cryptography.RSA.nuspec",
+        "lib/aspnetcore50/System.Security.Cryptography.RSA.dll",
+        "lib/contract/System.Security.Cryptography.RSA.dll",
+        "lib/net45/System.Security.Cryptography.RSA.dll",
+        "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Security.Cryptography.RSA.dll"
+      ]
+    },
+    "System.Security.Cryptography.X509Certificates/4.0.0-beta-22816": {
+      "serviceable": false,
+      "sha": "1GWuXid5RltZu+zMiPbnBv78TqUwF7Gw3hH68l4x7B83iXwAibafGtBRkU6b0Ca8xRQ0QW+gdZ8Z9qwouckGiw==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816",
+            "System.Runtime.Handles": "4.0.0-beta-22816",
+            "System.Security.Cryptography.Encoding": "4.0.0-beta-22816",
+            "System.Security.Cryptography.Encryption": "4.0.0-beta-22816"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System"
+          ],
+          "runtimeAssemblies": [
+            "lib/net45/System.Security.Cryptography.X509Certificates.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.Security.Cryptography.X509Certificates.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816",
+            "System.Runtime.Handles": "4.0.0-beta-22816",
+            "System.Security.Cryptography.Encoding": "4.0.0-beta-22816",
+            "System.Security.Cryptography.Encryption": "4.0.0-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Security.Cryptography.X509Certificates.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Security.Cryptography.X509Certificates.dll"
+          ]
+        }
+      },
+      "files": [
+        "License.rtf",
+        "System.Security.Cryptography.X509Certificates.4.0.0-beta-22816.nupkg",
+        "System.Security.Cryptography.X509Certificates.4.0.0-beta-22816.nupkg.sha512",
+        "System.Security.Cryptography.X509Certificates.nuspec",
+        "lib/aspnetcore50/System.Security.Cryptography.X509Certificates.dll",
+        "lib/contract/System.Security.Cryptography.X509Certificates.dll",
+        "lib/net45/System.Security.Cryptography.X509Certificates.dll",
+        "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Security.Cryptography.X509Certificates.dll"
       ]
     },
     "System.Text.Encoding/4.0.10-beta-22816": {

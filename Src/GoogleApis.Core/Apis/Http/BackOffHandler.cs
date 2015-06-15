@@ -15,12 +15,11 @@ limitations under the License.
 */
 
 using System;
-using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-
 using Google.Apis.Logging;
 using Google.Apis.Util;
+using System.Net.Http;
 
 namespace Google.Apis.Http
 {
@@ -178,7 +177,11 @@ namespace Google.Apis.Http
         /// the middle.</param>
         protected virtual async Task Wait(TimeSpan ts, CancellationToken cancellationToken)
         {
-            await TaskEx.Delay(ts, cancellationToken).ConfigureAwait(false);
+#if DNX451 || DNXCORE50
+                await Task.Delay(ts, cancellationToken).ConfigureAwait(false);
+#else
+                await TaskEx.Delay(ts, cancellationToken).ConfigureAwait(false);
+#endif
         }
     }
 }

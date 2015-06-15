@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-*",
+  "version": "1.0.1-*",
   "description": "Google API Core Library ported to DNX Core 5.0",
   "authors": [ "peleyal" ],
   "tags": [ "" ],

@@ -19,9 +19,11 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 
-using Google.Apis.Testing;
+[assembly: InternalsVisibleTo("GoogleApis.vNext")]
+[assembly: InternalsVisibleTo("GoogleApis.Auth.vNext")]
 
 namespace Google.Apis.Util
 {
@@ -29,17 +31,17 @@ namespace Google.Apis.Util
     public static class Utilities
     {
         /// <summary>Returns the version of the core library.</summary>
-        [VisibleForTestOnly]
-        public static string GetLibraryVersion()
+        internal static string GetLibraryVersion()
         {
+#if DNX451 || DNXCORE50
+            return Regex.Match(typeof(Utilities).GetTypeInfo().Assembly.FullName, "Version=([\\d\\.]+)").Groups[1].ToString();
+#else
             return Regex.Match(typeof(Utilities).Assembly.FullName, "Version=([\\d\\.]+)").Groups[1].ToString();
+#endif
         }
 
-        /// <summary>
-        /// A Google.Apis utility method for throwing an <see cref="System.ArgumentNullException"/> if the object is
-        /// <c>null</c>.
-        /// </summary>
-        public static T ThrowIfNull<T>(this T obj, string paramName)
+        /// <summary>Throws an <see cref="System.ArgumentNullException"/> if the object is null.</summary>
+        internal static T ThrowIfNull<T>(this T obj, string paramName)
         {
             if (obj == null)
             {
@@ -50,11 +52,10 @@ namespace Google.Apis.Util
         }
 
         /// <summary>
-        /// A Google.Apis utility method for throwing an <see cref="System.ArgumentNullException"/> if the string is
-        /// <c>null</c> or empty.
+        /// Throws an <see cref="System.ArgumentNullException"/> if the string is <c>null</c> or empty.
         /// </summary>
         /// <returns>The original string.</returns>
-        public static string ThrowIfNullOrEmpty(this string str, string paramName)
+        internal static string ThrowIfNullOrEmpty(this string str, string paramName)
         {
             if (string.IsNullOrEmpty(str))
             {
@@ -69,15 +70,14 @@ namespace Google.Apis.Util
             return coll == null || coll.Count() == 0;
         }
 
-        /// <summary>
-        /// A Google.Apis utility method for returning the first matching custom attribute (or <c>null</c>) of the specified member.
-        /// </summary>
-        public static T GetCustomAttribute<T>(this MemberInfo info) where T : Attribute
+#if !DNX451 && !DNXCORE50
+        /// <summary>Returns the first matching custom attribute (or <c>null</c>) of the specified member.</summary>
+        internal static T GetCustomAttribute<T>(this MemberInfo info) where T : Attribute
         {
-            object[] results = info.GetCustomAttributes(typeof(T), false);
+            object[] results = info.GetCustomAttributes(typeof(T), false).ToArray();
             return results.Length == 0 ? null : (T)results[0];
         }
-
+#endif
         /// <summary>Returns the defined string value of an Enum.</summary>
         internal static string GetStringValue(this Enum value)
         {
@@ -86,6 +86,7 @@ namespace Google.Apis.Util
 
             // If set, return the value.
             var attribute = entry.GetCustomAttribute<StringValueAttribute>();
+
             if (attribute != null)
             {
                 return attribute.Text;
@@ -97,26 +98,21 @@ namespace Google.Apis.Util
         }
 
         /// <summary>
-        /// Returns the defined string value of an Enum. Use for test purposes or in other Google.Apis projects.
-        /// </summary>
-        public static string GetEnumStringValue(Enum value)
-        {
-            return value.GetStringValue();
-        }
-
-        /// <summary>
         /// Tries to convert the specified object to a string. Uses custom type converters if available.
         /// Returns null for a null object.
         /// </summary>
-        [VisibleForTestOnly]
-        public static string ConvertToString(object o)
+        internal static string ConvertToString(object o)
         {
             if (o == null)
             {
                 return null;
             }
 
+#if DNX451 || DNXCORE50
+            if (o.GetType().GetTypeInfo().IsEnum)
+#else
             if (o.GetType().IsEnum)
+#endif
             {
                 // Try to convert the Enum value using the StringValue attribute.
                 var enumType = o.GetType();

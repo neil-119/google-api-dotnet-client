@@ -38,52 +38,6 @@
     ]
   },
   "libraries": {
-    "GoogleApis.Core.vNext/1.0.0": {
-      "serviceable": false,
-      "sha": "9J2voYwYzcqa7cn5wfAYZXfQJmityz2uMl5Ytygygu5b45f0VuWAk20GdJY3Iu2IsGfIfajveL4WQCs8NiYKSg==",
-      "frameworks": {
-        "DNX,Version=v4.5.1": {
-          "dependencies": {},
-          "frameworkAssemblies": [],
-          "runtimeAssemblies": [],
-          "compileAssemblies": []
-        },
-        "DNXCore,Version=v5.0": {
-          "dependencies": {
-            "System.Net.Primitives": "4.0.10-beta-22816",
-            "System.Reflection.Extensions": "4.0.0-beta-22816",
-            "System.Reflection": "4.0.10-beta-22816",
-            "System.Reflection.TypeExtensions": "4.0.0-beta-22816",
-            "System.Threading.Tasks": "4.0.10-beta-22816",
-            "System.Globalization": "4.0.10-beta-22816",
-            "System.Net.Http": "4.0.0-beta-22816",
-            "Newtonsoft.Json": "7.0.1-beta3",
-            "System.Text.RegularExpressions": "4.0.10-beta-22816",
-            "System.Runtime": "4.0.20-beta-22816",
-            "System.Runtime.Extensions": "4.0.10-beta-22816",
-            "dnx-coreclr-win-x64": "1.0.0-beta4",
-            "System.Collections": "4.0.10-beta-22816",
-            "System.Linq": "4.0.0-beta-22816",
-            "System.Threading": "4.0.10-beta-22816",
-            "Microsoft.CSharp": "4.0.0-beta-22816"
-          },
-          "frameworkAssemblies": [],
-          "runtimeAssemblies": [
-            "lib/dnxcore50/GoogleApis.Core.vNext.dll"
-          ],
-          "compileAssemblies": [
-            "lib/dnxcore50/GoogleApis.Core.vNext.dll"
-          ]
-        }
-      },
-      "files": [
-        "GoogleApis.Core.vNext.1.0.0.nupkg",
-        "GoogleApis.Core.vNext.1.0.0.nupkg.sha512",
-        "GoogleApis.Core.vNext.nuspec",
-        "lib/dnxcore50/GoogleApis.Core.vNext.dll",
-        "lib/dnxcore50/GoogleApis.Core.vNext.xml"
-      ]
-    },
     "Microsoft.CSharp/4.0.0-beta-22816": {
       "serviceable": false,
       "sha": "FGnaYvmoVLd0QTnOyHfm+C79a9CGqQAoh76Ix9++a4SdeaAB8PgpB2Vi/Uc5jcp491QvPyPQjtXCuhRfqWvNkw==",

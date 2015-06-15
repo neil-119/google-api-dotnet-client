@@ -18,6 +18,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -28,6 +29,8 @@ using Google.Apis.Logging;
 using Google.Apis.Util;
 using Google.Apis.Util.Store;
 using Google.Apis.Testing;
+
+[assembly:InternalsVisibleTo("GoogleApis.Auth.Tests.vNext")]
 
 namespace Google.Apis.Auth.OAuth2.Flows
 {
@@ -291,7 +294,7 @@ namespace Google.Apis.Auth.OAuth2.Flows
         /// <param name="taskCancellationToken">Cancellation token to cancel operation.</param>
         /// <returns>Token response with the new access token.</returns>
         [VisibleForTestOnly]
-        public async Task<TokenResponse> FetchTokenAsync(string userId, TokenRequest request,
+        internal async Task<TokenResponse> FetchTokenAsync(string userId, TokenRequest request,
             CancellationToken taskCancellationToken)
         {
             // Add client id and client secret to requests.

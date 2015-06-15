@@ -1,35 +1,34 @@
 {
-    "version": "1.0.0-*",
-    "description": "",
-    "authors": [ "" ],
-    "tags": [ "" ],
-    "projectUrl": "",
-    "licenseUrl": "",
+  "version": "1.0.0-*",
+  "description": "",
+  "authors": [ "" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
 
-    "dependencies": {
-        "GoogleApis.Core.vNext": "1.0.0-*",
-        "GoogleApis.vNext": "1.0.0-*",
-        "Xunit": "2.1.0-beta2-*",
-        "Xunit.runner.dnx": "2.1.0-beta2-*",
-        "System.Text.Encoding.Extensions": "4.0.10-beta-22816",
-        "LightMock.vNext": "1.0.1"
+  "dependencies": {
+    "Xunit": "2.1.0-beta2-*",
+    "Xunit.runner.dnx": "2.1.0-beta2-*",
+    "LightMock.vNext": "1.0.1",
+    "GoogleApis.Core.vNext": "1.0.0-*",
+    "GoogleApis.vNext": "1.0.0-*",
+    "System.Text.Encoding.Extensions": "4.0.10-beta-22816"
+  },
+
+  "commands": {
+    "test": "xunit.runner.dnx"
+  },
+
+  "frameworks": {
+    "dnx451": {
     },
-
-    "commands": {
-        "test": "xunit.runner.dnx"
-    },
-
-    "frameworks": {
-        "dnx451": {
-
-        },
-        "dnxcore50": {
-            "dependencies": {
-                "System.Collections": "4.0.10-beta-22816",
-                "System.Linq": "4.0.0-beta-22816",
-                "System.Threading": "4.0.10-beta-22816",
-                "Microsoft.CSharp": "4.0.0-beta-22816"
-            }
-        }
+    "dnxcore50": {
+      "dependencies": {
+        "System.Collections": "4.0.10-beta-22816",
+        "System.Linq": "4.0.0-beta-22816",
+        "System.Threading": "4.0.10-beta-22816",
+        "Microsoft.CSharp": "4.0.0-beta-22816"
+      }
     }
+  }
 }

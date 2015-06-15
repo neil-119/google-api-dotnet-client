@@ -26,7 +26,7 @@ using Google.Apis.Util;
 namespace Google.Apis.Auth.OAuth2.Requests
 {
     /// <summary>Extension methods to <see cref="TokenRequest"/>.</summary>
-    public static class TokenRequestExtenstions
+    internal static class TokenRequestExtenstions
     {
         /// <summary>
         /// Executes the token request in order to receive a 

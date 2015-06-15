@@ -35,7 +35,7 @@ namespace Google.Apis.Http
     /// </list>
     /// </summary>
     [VisibleForTestOnly]
-    public class MaxUrlLengthInterceptor : IHttpExecuteInterceptor
+    internal class MaxUrlLengthInterceptor : IHttpExecuteInterceptor
     {
         private readonly uint maxUrlLength;
 
@@ -49,7 +49,11 @@ namespace Google.Apis.Http
         {
             if (request.Method != HttpMethod.Get || request.RequestUri.AbsoluteUri.Length <= maxUrlLength)
             {
+#if DNX451 || DNXCORE50
+                return Task.Delay(0);
+#else
                 return TaskEx.Delay(0);
+#endif
             }
             // Change the method to POST.
             request.Method = HttpMethod.Post;
@@ -65,7 +69,12 @@ namespace Google.Apis.Http
                 request.RequestUri = new Uri(requestString.Remove(requestString.IndexOf("?")));
             }
             request.Headers.Add("X-HTTP-Method-Override", "GET");
+
+#if DNX451 || DNXCORE50
+            return Task.Delay(0);
+#else
             return TaskEx.Delay(0);
+#endif
         }
     }
 }

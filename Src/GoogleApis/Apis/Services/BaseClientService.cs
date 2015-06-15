@@ -22,7 +22,6 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-using Ionic.Zlib;
 using Newtonsoft.Json;
 
 using Google.Apis.Discovery;
@@ -53,7 +52,7 @@ namespace Google.Apis.Services
 
         /// <summary>The default maximum allowed length of a URL string for GET requests.</summary>
         [VisibleForTestOnly]
-        public const uint DefaultMaxUrlLength = 2048;
+        internal const uint DefaultMaxUrlLength = 2048;
 
         #region Initializer
 
@@ -139,7 +138,7 @@ namespace Google.Apis.Services
         /// <summary>Returns <c>true</c> if this service contains the specified feature.</summary>
         private bool HasFeature(Features feature)
         {
-            return Features.Contains(Utilities.GetEnumStringValue(feature));
+            return Features.Contains(feature.GetStringValue());
         }
 
         private ConfigurableHttpClient CreateHttpClient(Initializer initializer)
